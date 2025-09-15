@@ -1,0 +1,286 @@
+/* ===========================================
+   CSS CHO LOGIN/REGISTER CLIENT
+   =========================================== */
+
+/* Background chính cho trang login/register */
+.container-acc {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.login-background {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #a8e6cf 25%, #20b2aa 55%, #0a6b5f 65%, #044A42 80%, #022A26 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-background .triangle-1,
+.login-background .triangle-2,
+.login-background .triangle-3,
+.login-background .triangle-5,
+.login-background .triangle-6,
+.login-background .triangle-7 {
+  position: absolute;
+  z-index: 1;
+}
+
+.card-acc {
+  width: 90%;
+  height: 80vh;
+  /* max-width: 1000px; */
+  min-height: 80vh;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* @media (max-width: 768px) {
+  .card-acc {
+    width: 95%;
+    height: 85vh;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-acc {
+    width: 98%;
+    height: 80vh;
+    margin: 5px auto;
+  }
+} */
+
+.bg-gradient-card {
+  /* background: linear-gradient(135deg, #ffffff 0%, #a8e6cf 25%, #2ecc71 50%, #0a6b5f 75%, #044A42 100%); */
+  /* background: linear-gradient(135deg, #ffffff 0%, #a8e6cf 25%, #20b2aa 50%, #0a6b5f 75%, #044A42 100%); */
+  /* background: linear-gradient(135deg, #ffffff 0%, #a8e6cf 25%, #1ca085 50%, #0a6b5f 70%, #044A42 100%); */
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-blur {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 10;
+  color: #ffffff;
+}
+
+.bg-blur::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.105);
+  z-index: 9;
+}
+
+.content-blur {
+  position: relative;
+  z-index: 10;
+}
+
+.content-blur p {
+  color: #080303;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.logoLogin {
+  width: 70px;
+
+}
+
+/* Đảm bảo backdrop-filter hoạt động */
+.bg-gradient-card>* {
+  position: relative;
+  z-index: 2;
+}
+
+.group-input {
+  position: relative;
+  border-bottom: 2px solid var(--aa-success);
+  margin-bottom: 20px;
+}
+
+.group-input label {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: transparent;
+
+  /* padding: 0 5px; */
+}
+
+.group-input input {
+  width: 100%;
+  color: var(--aa-success);
+  background: transparent;
+  border: none !important;
+  outline: none !important;
+  padding: 10px 0;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.group-input input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent !important;
+}
+
+.group-input input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Loại bỏ viền Bootstrap */
+.group-input .form-control:focus {
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.group-input .form-control {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* Loại bỏ màu nền autofill */
+.group-input input:-webkit-autofill,
+.group-input input:-webkit-autofill:hover,
+.group-input input:-webkit-autofill:focus,
+.group-input input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: var(--aa-success) !important;
+  background-color: transparent !important;
+  background-clip: content-box !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* Loại bỏ màu nền cho tất cả trạng thái */
+.group-input input,
+.group-input input:focus,
+.group-input input:active,
+.group-input input:hover {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Xử lý autofill cho Firefox */
+.group-input input:-moz-autofill {
+  background-color: transparent !important;
+  background: transparent !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+}
+
+/* Xử lý cho tất cả browser */
+.group-input input[data-autocompleted] {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+.group-input input:focus {
+  background-color: transparent !important;
+}
+
+.group-input input:focus+label,
+.group-input input:valid+label {
+  top: -15px;
+  left: 0px;
+  font-size: 14px;
+  color: var(--aa-success);
+  background: transparent;
+  transform: translateY(0);
+  /* font-weight: bold; */
+}
+
+.group-input i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 10px 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.group-input i:hover {
+  opacity: 0.7;
+}
+
+/* Google Login Button */
+
+
+.btn-google:hover {
+  background-color: #f8f9fa;
+  border-color: #dadce0;
+  color: #3c4043;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Remember me & Forgot password styling */
+.form-check-input:checked {
+  background-color: var(--aa-success);
+  border-color: var(--aa-success);
+}
+
+.form-check-input:focus {
+  border-color: var(--aa-success);
+  box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+.form-check-label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.text-success.text-decoration-none:hover {
+  text-decoration: underline !important;
+  color: var(--aa-success) !important;
+}
+
+.text-acc {
+  color: var(--aa-success);
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.left{
+  font-size: 18px;
+}
