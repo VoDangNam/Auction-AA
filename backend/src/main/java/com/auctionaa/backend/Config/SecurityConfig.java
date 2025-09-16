@@ -13,7 +13,9 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable()) // disable CSRF theo cú pháp mới
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/register", "/api/auth/register").permitAll()
+                        .requestMatchers("/register", "/api/auth/register",
+                                "/FeaturedAw", "/addArtwork","/allArtwork"
+                        ).permitAll()
                         .anyRequest().authenticated()
                 );
 

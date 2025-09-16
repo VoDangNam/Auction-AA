@@ -1,5 +1,6 @@
 package com.auctionaa.backend.Service;
 
+import com.auctionaa.backend.Model.RegisterRequest;
 import com.auctionaa.backend.Model.User;
 import com.auctionaa.backend.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,16 +13,25 @@ public class UserService {
     private UserRepository userRepository;
 
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-    public String register(User user){
-        if(userRepository.existsByEmail(user.getEmail())){
-            return "Email đã tồn tại !!!";
+    public String register(RegisterRequest request){
+        if(!request.getPassword().equals(request.getConfirmPassword())){
+            return "Mật khẩu không khớp";
         }
 
-        String hashedPassword = passwordEncoder.encode(user.getPassword());
-        user.setPassword(hashedPassword);
+        if(userRepository.existsByEmail(request.getEmail())){
+            return "Email đã tồn tại";
+        }
 
+        User user= new User();
+        user.setUsername(request.getUsername());
+        user.setEmail(request.getEmail());
+
+        String encodedPassword = passwordEncoder.encode(request.getPassword());
+        user.setPassword(encodedPassword);
+        user.setPhonenumber(request.getPhone());
 
         userRepository.save(user);
-        return "đăng ký thành công";
+        return "Đăng ký thành công";
+
     }
 }
