@@ -156,7 +156,7 @@
     border-right: 100px solid transparent;
     border-bottom: 130px solid rgba(4, 74, 66, 1.8);
     transform: rotate(-150deg);
-    z-index: 7;
+    z-index: 2;
     animation: float7 7.5s ease-in-out infinite;
 }
 

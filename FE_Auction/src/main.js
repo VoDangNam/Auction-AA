@@ -1,11 +1,15 @@
 import './assets/main.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/bootstrap-override.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './assets/main.css'                    // file CSS global của bạn
-import '@fortawesome/fontawesome-free/css/all.min.css'
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
+import '@fortawesome/fontawesome-free/css/solid.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 import Default from './layout/wrapper/index.vue'
 import Blank from './layout/wrapper/index_blank.vue'

@@ -55,14 +55,14 @@
                     <i class="bi fa-xl" :class="showPassword ? 'bi-eye' : 'bi-eye-slash'" @click="togglePassword"
                       style="cursor: pointer;"></i>
                   </div>
-                  <!-- RePassword
+                  <!-- RePassword -->
                   <div class="group-input col-lg-12 col-md-12">
                     <input :type="showRePassword ? 'text' : 'password'" class="form-control" id="repassword"
-                      v-model="create.re_password" required>
+                       required>
                     <label for="repassword">RePassword</label>
                     <i class="bi fa-xl" :class="showRePassword ? 'bi-eye' : 'bi-eye-slash'" @click="toggleRePassword"
                       style="cursor: pointer;"></i>
-                  </div> -->
+                  </div>
                 </div>
 
                 <!-- Terms & Conditions -->

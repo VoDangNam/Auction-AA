@@ -3,7 +3,7 @@
     <div class="header-wrapper">
       <MenuClient></MenuClient>
     </div>
-    <div class="page-wrapper">
+    <div class="page-wrapper mb-5">
       <div class="page-content">
         <router-view></router-view>
       </div>
@@ -14,6 +14,7 @@
 <script>
 import BotClient from "../components/client/BotClient.vue";
 import MenuClient from "../components/client/MenuClient.vue";
+
 export default {
   name: "app",
   components: {
@@ -24,5 +25,5 @@ export default {
 <style>
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'bootstrap';
-@import '@fortawesome/fontawesome-free/css/all.min.css';
+/* @import '@fortawesome/fontawesome-free/css/all.min.css'; */
 </style>

@@ -55,6 +55,40 @@ const routes = [
     // meta: { layout: "client" },
     // beforeEnter: checkUser,
   },
+  {
+    path: '/client/profile',
+    name: 'profile',
+    component: () => import('../views/Client/Profile/index.vue'),
+    meta: { layout: "client" },
+
+    children: [
+      {
+        path: '',
+        redirect: '/client/profile/art-management'
+      },
+      {
+        path: 'art-management',
+        name: 'profile-art-management',
+        component: () => import('../views/Client/Profile/Management/index.vue')
+      },
+      {
+        path: 'history',
+        name: 'profile-history',
+        component: () => import('../views/Client/Profile/History/index.vue')
+      },
+      {
+        path: 'invoices',
+        name: 'profile-invoices',
+        component: () => import('../views/Client/Profile/Invoices/index.vue')
+      },
+      {
+        path: 'e-wallet',
+        name: 'profile-e-wallet',
+        component: () => import('../views/Client/Profile/EWallet/index.vue')
+      },
+    ]
+    // beforeEnter: checkUser,
+  },
 
 
 ]
