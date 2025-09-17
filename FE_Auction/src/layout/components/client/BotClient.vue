@@ -43,16 +43,16 @@
             <h4 class="fw-bold">Support</h4>
           </div>
           <div class="col-lg-12 mb-4 footer-links">
-            <a href="#home">Trung tâm trợ giúp</a>
+            <a href="#home">Help Center</a>
           </div>
           <div class="col-lg-12 mb-4 footer-links">
-            <a href="#home">Liên hệ với chúng tôi</a>
+            <a href="#home">Contact Us</a>
           </div>
           <div class="col-lg-12 mb-4 footer-links">
             <a href="#home">FAQ</a>
           </div>
           <div class="col-lg-12 mb-4 footer-links">
-            <a href="#home">Điều khoản sử dụng</a>
+            <a href="#home">Terms of Use</a>
           </div>
         </div>
       </div>
